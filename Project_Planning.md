@@ -9,7 +9,7 @@ The goal is to create a stable network wireless point-to-point connection from t
 1.1.1. Main consideration:
 - Choosing mounting location
   - [x] Campus Nordhausen: Library roof
-  - [ ] Within ThIWert:
+  - [x] Within ThIWert: staircase wall at the roof top 
 - Budget, cost
   - [x] 2 PoE Antennas Airfiber Ubiquiti 60 LR, €399 each
   - [x] APC Back-UPS Es 700, €138
