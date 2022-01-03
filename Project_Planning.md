@@ -3,7 +3,7 @@ An AKO Project by Gin Havana and AssiKalle
 
 ## I. Planning:
 **1. Goal:**
-The goal is to create a stable network radio connection from the HS-Nordhausen to the ThiWert. 
+The goal is to create a stable network wireless point-to-point connection from the HS-Nordhausen to the ThiWert. 
 
 ***1.1. Conditions and requirements:***  
 1.1.1. Main consideration:
