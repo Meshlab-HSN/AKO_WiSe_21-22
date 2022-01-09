@@ -1,18 +1,23 @@
 # Backbone ThIWert
 An AKO Project by Gin Havana and AssiKalle
 
-## I. Planning:
+## 1. Planning:
 **1. Goal:**
 The goal is to create a stable network radio connection from the HS-Nordhausen to the ThiWert. 
 
 ***1.1. Conditions and requirements:***  
 1.1.1. Main consideration:
+
 - Choosing mounting location
   - [x] Campus Nordhausen: Library roof
   - [ ] Within ThIWert:
-- Budget, cost
-  - [x] 2 PoE Antennas Airfiber Ubiquiti 60 LR, €399 each
-  - [x] APC Back-UPS Es 700, €138
+- Budget, cost:
+
+| Name | Amount | Total cost |
+| ---- | ---- |---- |
+| PoE Antennas Airfiber Ubiquiti 60 LR | 2 | €798 |
+| (Battery) APC Back-UPS Es | 1 | €138|
+
 - Time: Estimated time required for full project is one semester.
 - Quality requirement
   - Presumably the connection is flawlessly
@@ -75,7 +80,7 @@ Test installation and configuration of PoE Antennas in Labor.
 
 tbd [^1]
 
-**4. Contact details:**  
+**4. Contact details:**
 1. ThIWert:
    - Prof. Ariane Ruff
    - Admin* Mark Gassmann
@@ -84,12 +89,12 @@ tbd [^1]
 3. Supervisor:
    - Prof. Dr.-Ing. Thomas Hühn
 
-## II. Implementation:
+## 2. Implementation:
 
 **1. Condition research and preparation:**  
 Due to known information, there are two variants from which the antenna(s) can be installed. They are building 18 and building 19. Distance will be measured from south side of both buildings, since ThIWert main building is positioned southern from Campus, and from north side of ThIWert main building. Assuming that installation points can be roughly on the southern wall of buildings 18 and 19 and on northern wall of ThIWert building, the measured/estimated distances via Google Earth are:
 
-|Distance from H18|Distance from H19|Height difference
+|Distance from H18|Distance from H19|Height difference|
 | - | - | - |
 |1.37 ~ 1.41 km|1.35 ~ 1.39 km|10 ~ 11 m|
 
@@ -139,106 +144,41 @@ https://user-images.githubusercontent.com/66717834/142772420-a6c32e5f-44b6-4808-
 
 **4. Installation:**
 1. Solution:
-After discussing with supervisor, the conclusion is that Laser 60 GHz is theoretically impossible to transmit signal direct through objectives like trees, so the first solution is using Laser 5 GHz and if it is still not possible then Laser 2.4 GHz. There are 2 sample antennas in Labor so that a temporary installation is possible.
+After discussing with supervisor, the conclusion is that Laser 60 GHz is theoretically impossible to transmit signal direct through objectives like trees, so the first solution is using Laser 5 GHz and if it is still not possible then Laser 2.4 GHz. There are 2 sample antennas 5 GHz in Labor so that a temporary installation is possible.
 In ThIWert, there are 2 possible place on the roof of main building that will be tested for mounting: On the wall of the small entrance or on the ground of the roof.
 Antenna will also be set on the top of the staircase next to the entrance of the library (possible nearest to the planning mounting point)
 
-2. Preparation for Live Experiment:
-   
-    *1. Update November 29th 2021*: Thomas the supervisor had ordered an uninterrupted power suply (UPS) for Installation Test.
-Design Hardware and Software setup: 
-    - 2 PoE antennas with ip
-    ```
-    192.168.88.3/24
-    ```
-    and
-    ```
-    192.168.88.4/24
-    ```
-  
-    Plan for pratical test installation has also been drafted:
-    - 1 antenna is planned to be set on top of staircase in Campus next to the Library, aka neareast posible test position.
-    - 1 antenna is planned to be set on either floor of ThIWert roof or on the wall of the small entrance to the roof.
-  
-    Connection between 2 antennas must be configured and tested.
-    After power plugged in and antennas wired to laptops, we have to set our own ethernet0 ipv4. I choose
-    ```
-    192.168.88.110
-    ```
-    and AssiKalle choose
-    ```
-    192.168.88.100
-    ```
-    We ping to each other's antenna at 192.168.88.3 and 192.168.88.4 respectively. There is no package loss.  
-    Devices interface is accessed via
-    ```
-    192.168.88.3
-    ```
-    and
-    ```
-    192.168.88.4
-    ```
-    with username
-    ```
-    root
-    ```
-    and password
-    ```
-    Sommer4
-    ```
-    
-    Configuration is performed by Windows Commandline/PowerShell and WSL Ubuntu. We use iperf commandline, where one opens a connection as server via Ubuntu
-    ```
-    iperf3 -s [ipv4]
-    ```
-    or PowerShell/Cmd
-    ```
-    iperf3.exe -s [ipv4]
-    ```
-    
-    <img src="https://user-images.githubusercontent.com/66717834/145724225-11863f88-76f1-41d3-9ecf-4fe693fffced.jpeg" alt="iperf-s-110"/>!
+2. Preparation for Live Experiment:  
+Design Hardware and Software setup:  
 
-    and the other connects to that server as client via Ubuntu
-    ```
-    iperf3 -c [ipv4] -p [port]  
-    ```
-    or via PowerShell/Cmd
-    ```
-    iperf3.exe -c [ipv4] -p [port]  
-    ```
+| -------- | PoE antennas (GHz) | Device IPv4      | ethernet0 IPv4 | username | password       | Firmware                          |
+| -------- | ------------------ | ---------------- | -------------- | -------- | -------------- | --------------------------------- |
+| DH       | 5                  | 192.168.88.3/24  | 192.168.88.110 | root     | Sommer4        | --------------------------------- |
+| -------- | 60                 | 192.168.88.20/24 | 192.168.88.30  | root     | Nordhausen2021 | GP.V2.6.0-BETA3.46505.211208.1235 |
+| Valerius | 5                  | 192.168.88.4/24  | 192.168.88.100 | root     | Sommer4        | --------------------------------- |
+| -------- | 60                 | 192.168.88.20/24 | 192.168.88.40  | root     | Nordhausen2021 | GP.V2.6.0-BETA3.46505.211208.1235 |
+
+*2.1. Update November 29th 2021:*  
+Thomas the supervisor had ordered an uninterrupted power suply (UPS) for Installation Test.  
+Plan for pratical test installation has also been drafted:  
+- 1 antenna is planned to be set on top of staircase in Campus next to the Library, aka neareast posible test position.
+- 1 antenna is planned to be set on either floor of ThIWert roof or on the wall of the small entrance to the roof.
+  
+Connection between 2 antennas must be configured and tested. After sending pings to each other's antenna no package loss is recorded.  
     
-    <img src="https://user-images.githubusercontent.com/66717834/145724197-73d7d01e-2b3e-41ef-bdb0-2e146d75343d.jpeg" alt="iperf-c"/>
+Configuration is performed by Windows Commandline/PowerShell and WSL Ubuntu. We use 'iperf' commandline, where one opens a connection as server via Ubuntu
+ 
+| Software               | Server create        | Client connect                  |
+| ---------------------- | -------------------- | ------------------------------- |
+| Windows Cmd/Powershell | iperf3.exe -s [ipv4] | iperf3.exe -c [ipv4] -p [port]  |
+| WSL Ubuntu             | iperf3 -s [ipv4]     | iperf3 -c [ipv4] -p [port]      |
 
-    There was 1 unknown technical issue that at some early attempts we couldn't ping directly to each other, only to the antennas. Both devices could also not connect to each other via iperf3.
+There was 1 unknown technical issue that at some early attempts we couldn't ping directly to each other, only to the antennas. Both devices could also not connect to each other via iperf3. Connection between admin devices (laptops) through switch is still working.
   
-    *2. Update December 6th 2021:*
-    After whole session trying to find the cause for not connectable, we have found out that the problem was that cables were loosely plugged in PoE Antennas outlets, so that not all lamps lighted up and the Antennas did not function properly, particularly did not generate signal. After few attempts with different cables and holding positions, we manage to light up all the router lamps. Therefore connection has been established as shown from 2 photos above.
+*2.2. Update December 6th 2021:*
+After whole session trying to find the cause for not connectable, we have found out that the problem was that cables were loosely plugged in PoE Antennas outlets, so that not all lamps lighted up and the Antennas did not function properly, particularly did not generate signal. After few attempts with different cables and holding positions, we manage to light up all the router lamps. Therefore connection has been established as shown from 2 photos above.
   
-    *3. Update December 13th 2021:*
-    Thomas has ordered 2 new antennas Airfiber Ubiquiti 60LR for test performance with radio signal 60GHz. After assembling components we have to set up new username
-    ```
-    root
-    ```
-    and new password
-    ```
-    Nordhausen2021
-    ```
-    for the 2 antennas.
-    The default ip for this device is
-    ```
-    192.168.88.20/24
-    ```
-    so I set one to
-    ```
-    192.168.88.30
-    ```
-    and the other to
-    ```
-    192.168.88.40
-    ```
-    Following Thomas instruction, I have update the Firmware to both antennas to 
-    ```
-    GP.V2.6.0-BETA3.46505.211208.1235
-    ```
+*2.3. Update December 13th 2021:*
+Thomas has ordered 2 new antennas Airfiber Ubiquiti 60LR for test performance with radio signal 60GHz.
 
-## III. Operating: not yet
+## 3. Operating: not yet
