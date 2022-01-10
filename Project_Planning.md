@@ -115,7 +115,7 @@ The true distances measured from Library via Google Earth are:
 ![Ggl_Earth-lib-main](https://user-images.githubusercontent.com/73235656/148754880-eb0698a9-0673-4b60-ab5e-603409d5ca8a.png) [^2]
 [^2]: Distance to main building roof.
 
-![Ggl_Earth-lib-tower](https://user-images.githubusercontent.com/66717834/142769886-6b143490-8d0b-4b3e-be97-543b18d1b65b.png)[^3]
+![Ggl_Earth-lib-tower](https://user-images.githubusercontent.com/73235656/148755349-722fc940-5aa9-4718-9bc3-a41f31d546a9.png)[^3]
 [^3]: Distance to heat tower.
 
 There are 2 server containers that have PoE Switch wired to each other by Glass Fiber cable (? need reconfirmation):
