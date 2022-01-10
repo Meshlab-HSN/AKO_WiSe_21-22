@@ -112,7 +112,7 @@ The true distances measured from Library via Google Earth are:
 | - | - |
 |1.45 km|1.4 km|
 
-![Ggl_Earth-lib-main](https://user-images.githubusercontent.com/66717834/142769870-bb3dea9f-3266-4d89-a3d2-daaebadc317f.png) [^2]
+![Ggl_Earth-lib-main](https://user-images.githubusercontent.com/73235656/148754880-eb0698a9-0673-4b60-ab5e-603409d5ca8a.png) [^2]
 [^2]: Distance to main building roof.
 
 ![Ggl_Earth-lib-tower](https://user-images.githubusercontent.com/66717834/142769886-6b143490-8d0b-4b3e-be97-543b18d1b65b.png)[^3]
