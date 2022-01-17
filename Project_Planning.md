@@ -154,9 +154,9 @@ Design Hardware and Software setup:
 | -------- | PoE antennas (GHz) | Device IPv4      | ethernet0 IPv4 | username | password       | Firmware                          |
 | -------- | ------------------ | ---------------- | -------------- | -------- | -------------- | --------------------------------- |
 | DH       | 5                  | 192.168.88.3/24  | 192.168.88.110 | root     | Sommer4        | --------------------------------- |
-| -------- | 60                 | 192.168.88.20/24 | 192.168.88.30  | root     | Nordhausen2021 | GP.V2.6.0-BETA3.46505.211208.1235 |
+| airFiber 60 HS | 60                 | 192.168.88.20/24 | 192.168.88.30  | root     | Nordhausen2021 | GP.V2.6.0-RC.46590.211230.1238 |
 | Valerius | 5                  | 192.168.88.4/24  | 192.168.88.100 | root     | Sommer4        | --------------------------------- |
-| -------- | 60                 | 192.168.88.20/24 | 192.168.88.40  | root     | Nordhausen2021 | GP.V2.6.0-BETA3.46505.211208.1235 |
+| airFiber 60 ThIWert | 60                 | 192.168.88.20/24 | 192.168.88.40  | root     | Nordhausen2021 | GP.V2.6.0-RC.46590.211230.1238 |
 
 *2.1. Update November 29th 2021:*  
 Thomas the supervisor had ordered an uninterrupted power suply (UPS) for Installation Test.  
