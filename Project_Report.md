@@ -158,10 +158,12 @@ https://www.zotero.org/groups/4479602/backbone_thiwert/library
 
 ### 3.4. Contact detail:
 
-3.4.1. ThIWert:
-   - Prof. Ariane Ruff
-   - Admin* Mark Gassmann
-3.4.2. Medienzentrum:
-   - Fred Wagner
-3.4.3. Supervisor:
-   - Prof. Dr.-Ing. Thomas Hühn
+3.4.1. ThIWert:  
+- Prof. Ariane Ruff
+- Admin* Mark Gassmann
+
+3.4.2. Medienzentrum:   
+- Fred Wagner
+
+3.4.3. Supervisor:  
+- Prof. Dr.-Ing. Thomas Hühn
